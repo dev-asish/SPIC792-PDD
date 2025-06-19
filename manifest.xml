@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.app1">
+
+    <!-- Required Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.App1"
+        android:usesCleartextTraffic="true">
+
+        <!-- Launch / Welcome -->
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication -->
+        <activity android:name=".SignInActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".WelcomeActivity" />
+
+        <activity android:name=".LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".WelcomeActivity" />
+
+        <!-- Home Screen -->
+        <activity android:name=".HomeScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- Main screen to return after logout -->
+        <activity android:name=".MainScreenActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+
+        <!-- Buyer Flow -->
+        <activity android:name=".BuyerPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".BuyerDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".BuyerPageActivity" />
+
+        <!-- Seller Flow -->
+        <activity android:name=".SellerPageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".SellerDetailsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".SellerPageActivity" />
+
+        <!-- Buyer Category -->
+        <activity android:name=".CarsCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".BikesCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".VanCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <!-- Buyer Results -->
+        <activity android:name=".CarResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".CarsCategoryActivity" />
+
+        <activity android:name=".BikeResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".BikesCategoryActivity" />
+
+        <activity android:name=".VanResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".VanCategoryActivity" />
+
+        <!-- Seller Categories -->
+        <activity android:name=".SellActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".CarCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".BikeCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <activity android:name=".VansCategoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+        <!-- Seller Results -->
+        <activity android:name=".CarsResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".CarCategoryActivity" />
+
+        <activity android:name=".BikesResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".BikeCategoryActivity" />
+
+        <activity android:name=".VansResultsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".VansCategoryActivity" />
+
+        <activity android:name=".SellsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".HomeScreenActivity" />
+
+    </application>
+</manifest>
