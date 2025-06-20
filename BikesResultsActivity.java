@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.HashMap;
 import java.util.Map;
 
-public class BikeResultsActivity extends AppCompatActivity {
+public class BikesResultsActivity extends AppCompatActivity {
 
     private TextView bikeName, bikePricePrediction;
     private LinearLayout similarBikesContainer;
@@ -57,7 +57,7 @@ public class BikeResultsActivity extends AppCompatActivity {
         loadSimilarBikes(false);
 
         fullListButton.setOnClickListener(view -> toggleFullList());
-        nextButton.setOnClickListener(view -> openSellActivity());
+        nextButton.setOnClickListener(view -> openSellsActivity());
     }
 
     private void updateSelectedBike() {
@@ -108,8 +108,8 @@ public class BikeResultsActivity extends AppCompatActivity {
         fullListButton.setText(isExpanded ? "SHOW LESS" : "SHOW MORE");
     }
 
-    private void openSellActivity() {
-        Intent intent = new Intent(BikeResultsActivity.this, SellActivity.class);
+    private void openSellsActivity() {
+        Intent intent = new Intent(BikesResultsActivity.this, SellActivity.class);
         intent.putExtra("TYPE", "BIKE");
         intent.putExtra("VEHICLE_NAME", selectedBike);
         intent.putExtra("VEHICLE_PRICE", selectedPrice); // Send as int
