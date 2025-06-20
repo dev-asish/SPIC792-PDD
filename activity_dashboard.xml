@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/img2">
+
+        <!-- Title: What would you choose -->
+        <TextView
+            android:id="@+id/chooseText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WHAT WOULD YOU CHOOSE"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <!-- BUY Button -->
+        <Button
+            android:id="@+id/buyButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="BUY"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_style"
+            android:layout_below="@id/chooseText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <!-- SELL Button -->
+        <Button
+            android:id="@+id/sellButton"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:text="SELL"
+            android:textColor="@android:color/white"
+            android:background="@drawable/button_style"
+            android:layout_below="@id/buyButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
+        <!-- If entered details text -->
+        <TextView
+            android:id="@+id/detailsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="IF ENTERED DETAILS"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_below="@id/sellButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"/>
+
+        <!-- START Button -->
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/detailsText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/transparent"
+            android:src="@android:drawable/ic_media_play"/>
+
+        <!-- START text below the button -->
+        <TextView
+            android:id="@+id/startText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="START"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"/>
+    </RelativeLayout>
+</ScrollView>
